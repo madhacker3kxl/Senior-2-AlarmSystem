@@ -1,0 +1,153 @@
+int buttonPushCounter = 0;
+const int Fan = 5;
+int buttonPin = A0;
+int speakerPin = 9;
+#include "pitches.h"
+
+// notes in the letitgo melody:
+  int letitgo[] = {
+NOTE_F4, NOTE_G4, NOTE_GS4, NOTE_GS4, 0, NOTE_DS4, NOTE_DS4, NOTE_AS4, NOTE_AS4, 0, NOTE_GS4, NOTE_F4, 
+//Let it go -- let it go. -- Can't
+NOTE_F4, NOTE_F4, NOTE_F4, NOTE_F4, NOTE_G4, NOTE_AS4, NOTE_AS4, 0, NOTE_F4, NOTE_G4, NOTE_GS4, NOTE_GS4, 0, NOTE_DS4, 
+
+NOTE_C5, NOTE_C5, 
+//hold it back an-y more--  Let it go -- let it go-----
+NOTE_AS4, 0, NOTE_GS4, NOTE_AS4, NOTE_C5, NOTE_C5, NOTE_CS5, NOTE_C5, NOTE_AS4, NOTE_GS4, NOTE_AS4, 
+
+NOTE_GS4, 0, 
+//-- Turn a-way- and slam - the - door
+NOTE_DS5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_AS4, 0, NOTE_GS4, NOTE_GS4, NOTE_DS5, NOTE_DS5, 0, NOTE_C5, NOTE_C5, 
+
+NOTE_GS4, 
+//I - don't care - What they're going to - say --
+0, 0, NOTE_GS4, NOTE_GS4, NOTE_G4, 0, NOTE_DS4, NOTE_DS4, NOTE_DS4, 0, NOTE_CS4, 
+//-- let the storm rage on -- The
+NOTE_CS4, NOTE_CS4, NOTE_C4, NOTE_CS4, NOTE_C4, NOTE_CS4, NOTE_CS4, NOTE_C4, NOTE_GS3, 
+//cold never bothered me anyway.
+};
+
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+int letitgoDurations[] = {
+8, 8, 8, 2, 8, 8, 8, 8, 2, 4, 8, 8, 
+8, 8, 4, 8, 4, 8, 2, 8, 8, 8, 8, 2, 8, 8, 8, 8, 
+2, 8, 8, 8, 4, 4, 4, 8, 8, 8, 8, 4, 2, 2, 
+4, 8, 8, 4, 2, 4, 4, 4, 4, 8, 8, 4, 2, 
+4, 4, 8, 8, 4, 8, 8, 4, 1, 8, 8, 
+4, 8, 8, 8, 8, 8, 8, 8, 4};
+  
+// notes in the snow man melody:
+  int snowman[] = {
+    NOTE_DS4, NOTE_DS4, NOTE_DS4, NOTE_AS3, NOTE_DS4, NOTE_G4, NOTE_F4, NOTE_G4, 0, 0,
+    0, 0, NOTE_DS4, NOTE_DS4,NOTE_AS3, NOTE_DS4, NOTE_G4, NOTE_F4, 0, 0, 0, 0, 0,
+    NOTE_DS4, NOTE_DS4, NOTE_AS3, NOTE_DS4, NOTE_G4, NOTE_GS4, NOTE_G4, NOTE_DS4, 0, NOTE_C4, NOTE_GS4, NOTE_G4, 
+    NOTE_DS4, 0, NOTE_DS4, NOTE_DS4, NOTE_AS3, NOTE_DS4, NOTE_G4, NOTE_B3, 0
+ };
+
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+int snowmanDurations[] = {
+    8, 8, 8, 8, 8, 8, 4, 2, 4, 8,
+    4, 8, 8, 8, 8, 8, 8, 2, 4, 4, 8, 4, 8,
+    8, 8, 8, 8, 8, 8, 8, 4, 8, 8, 8, 8, 
+    4, 8, 8, 8, 8, 8, 8, 4, 4  
+};
+
+  int forever[] = {
+
+NOTE_A4, NOTE_AS4, NOTE_C5, NOTE_F4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_C5, NOTE_C5, 0, NOTE_G4, NOTE_A4, 
+NOTE_AS4, NOTE_A4, NOTE_G4, NOTE_G4, NOTE_F4, NOTE_G4, 0,
+NOTE_A4, NOTE_AS4, NOTE_C5, NOTE_F4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_C5, NOTE_D5, 0, NOTE_G4, NOTE_A4, 
+NOTE_AS4, NOTE_A4, NOTE_G4, NOTE_G4, NOTE_F4, NOTE_G4, 0,
+
+
+ };
+
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+int foreverDurations[] = {
+
+
+8, 8, 4, 4, 4, 8, 4, 8, 4, 4, 8, 8, 
+4, 8, 8, 4, 8, 1, 4,
+8, 8, 4, 4, 4, 8, 4, 8, 4, 4, 8, 8, 
+4, 8, 8, 4, 8, 1, 4,
+
+
+ 
+};
+
+void setup ()
+   {
+     Serial.begin(9600);
+     pinMode (Fan, OUTPUT);
+     pinMode (buttonPin, INPUT);
+     pinMode (speakerPin, OUTPUT);
+   }
+   
+void loop ()
+   { //int buttonreading = analogRead(A0)
+     if (analogRead(A0) > 100)  // You could make this digital.
+        {
+          ++buttonPushCounter;
+          analogWrite(Fan, 255);
+          if (buttonPushCounter == 1) { play_snowmanMelody(); }
+          if (buttonPushCounter == 2) { play_foreverMelody(); }
+          if (buttonPushCounter == 3) { play_letitgoMelody();
+              buttonPushCounter = 0; }
+          analogWrite(Fan, 0);
+          
+        }
+   };
+        
+void play_snowmanMelody(){
+    for (int thisNote = 0; thisNote < (sizeof(snowmanDurations)/2); thisNote++) {
+
+    // to calculate the note duration, take one second 
+    // divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    int snowmanDuration = 1500/snowmanDurations[thisNote];
+    tone(speakerPin, snowman[thisNote], snowmanDuration);
+
+    // to distinguish the notes, set a minimum time between them.
+    // the note's duration + 30% seems to work well:
+    int pauseBetweenNotes = snowmanDuration * 1.30;
+    delay(pauseBetweenNotes);
+    // stop the tone playing:
+    noTone(speakerPin);
+  }   }
+  
+void play_letitgoMelody(){
+  // iterate over the notes of the melody:
+  for (int thisNote = 0; thisNote < (sizeof(letitgoDurations)/2); thisNote++) {
+
+    // to calculate the note duration, take one second 
+    // divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    int letitgoDuration = 1000/letitgoDurations[thisNote];
+    tone(speakerPin, letitgo[thisNote], letitgoDuration);
+
+    // to distinguish the notes, set a minimum time between them.
+    // the note's duration + 30% seems to work well:
+    int pauseBetweenNotes = letitgoDuration * 1.20;
+    delay(pauseBetweenNotes);
+    // stop the tone playing:
+    noTone(speakerPin);
+  }
+}
+
+void play_foreverMelody(){
+  // iterate over the notes of the melody:
+  for (int thisNote = 0; thisNote < (sizeof(foreverDurations)/2); thisNote++) {
+
+    // to calculate the note duration, take one second 
+    // divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    int foreverDuration = 1000/foreverDurations[thisNote];
+    tone(speakerPin, forever[thisNote], foreverDuration);
+
+    // to distinguish the notes, set a minimum time between them.
+    // the note's duration + 30% seems to work well:
+    int pauseBetweenNotes = foreverDuration * 1.20;
+    delay(pauseBetweenNotes);
+    // stop the tone playing:
+    noTone(speakerPin);
+  }
+}

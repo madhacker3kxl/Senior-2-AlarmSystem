@@ -1,0 +1,64 @@
+/*
+  Aerodynamic
+ 
+ Plays a melody
+ 
+ circuit:
+ * 8-ohm speaker on digital pin 8
+ 
+ created 17 Oct 2012
+ modified 17 Oct 2012
+ by Petzy
+ 
+This sketch is based on the toneMelody example:
+ 
+http://arduino.cc/en/Tutorial/Tone
+ 
+ */
+ #include "pitches.h"
+ 
+// notes in the melody:
+int melody[] = {
+  NOTE_D4, NOTE_F3, NOTE_B3, NOTE_F3,      // D4-F3-B3-F3
+  NOTE_D4, NOTE_GS3, NOTE_B3, NOTE_GS3,    // D4-Ab3-B3-Ab3
+  NOTE_G4, NOTE_B3, NOTE_E4, NOTE_B3,      // G4-B3-E4-B3
+  NOTE_E4, NOTE_A3, NOTE_CS4, NOTE_A3,     // E4-A3-C#4-A3
+  NOTE_D4, NOTE_FS4, NOTE_B3, NOTE_FS4,    // D4-F#4-B3-F#4
+  NOTE_D4, NOTE_GS3, NOTE_B3, NOTE_GS3,    // D4-Ab3-B3-Ab3
+  NOTE_G4, NOTE_B3, NOTE_E4, NOTE_B3,      // G4-B3-E4-B3
+  NOTE_E4, NOTE_A3, NOTE_CS4, NOTE_A3,     // E4-A3-C#-A3
+};
+ 
+int outputPin     = 8;
+int maxChords     = 8;
+int maxRepeats    = 4;         // every chord will be repeated 4 times
+int noteDuration  = 1000/8;    // 4 = quarter note, 8 = eight note, etc.
+ 
+void setup() {
+  // play sound once
+  
+}
+ 
+void playSound() {
+  // play all 8 chords
+  for (int chords = 0; chords < maxChords; chords++) {
+    // play every chord 4 times
+    for (int chordTone = 0; chordTone < 4; chordTone++) {
+      // play all 4 tones of every chord
+      for (int repeats = 0; repeats < maxRepeats; repeats++) {
+ 
+        // play the tone
+        tone(outputPin, melody[chords*maxRepeats + repeats], noteDuration);
+        // set a delay between the notes
+        delay(noteDuration);
+        // stop the tone playing
+        noTone(outputPin);
+      }
+    }
+  }
+}
+
+void loop()
+{
+  playSound();
+}
