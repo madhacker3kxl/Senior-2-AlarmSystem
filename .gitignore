@@ -34,6 +34,9 @@ $RECYCLE.BIN/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Visual Micro
+Visual Micro/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
