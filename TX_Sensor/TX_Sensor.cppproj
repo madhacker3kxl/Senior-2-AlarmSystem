@@ -729,10 +729,6 @@ build.arch=AVR
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\main.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\main.cpp</Link>
-    </Compile>
     <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\pins_arduino.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\pins_arduino.c</Link>

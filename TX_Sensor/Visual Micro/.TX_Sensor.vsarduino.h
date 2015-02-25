@@ -20,6 +20,7 @@ extern "C" void __cxa_pure_virtual() {;}
 //
 void sleep();
 void beep();
+void enable_batt_check();
 void check_battery();
 void setup_watchdog(int timerPrescaler);
 void battStatus();

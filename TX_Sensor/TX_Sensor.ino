@@ -18,7 +18,6 @@ RCSwitch mySwitch = RCSwitch();
 volatile boolean lowBattery = false; //Used to check if the interrupt has raised low battery
 volatile boolean is_open = false;    //If it is true that means the relay is open
 volatile boolean wdt_setup = false;
-volatile boolean wdt_on = false;
 
 void setup() {
     //Power off not needed stuff
@@ -48,18 +47,22 @@ void setup() {
 
 void loop() {
     if (wdt_setup) {
+        //enable_batt_check();
         send_data(Open_D); //Send data out for open contact
+        //check_battery();
         setup_watchdog(8); //Turn on watchdog for 4 sec delay
-    }
-    if (wdt_on)
-    {
-        PORTB |= (1 << LED);
+        wdt_setup = false;
     }
 
-    else
+    if (Sens)
     {
-        wdt_disable(); //Turn off the WDT!
-        attachInterrupt(INT0, wakeup, LOW);
+        wdt_disable();                        //Turn off the WDT!
+        //enable_batt_check();
+
+        send_data(Close_D);                   //Send data for closed contact
+        //check_battery();
+
+        attachInterrupt(INT0, wakeup, LOW);   //Turn on wake up interrupt
     }
 
     sleep();
@@ -83,9 +86,12 @@ void beep(){
     delay(500);
 }
 
+void enable_batt_check(){
+     analogComparator.setOn(INTERNAL_REFERENCE, AIN1);  //Setup analog comparator
+     analogComparator.enableInterrupt(battStatus, LOW); //Set interrupt for comparator
+}
+
 void check_battery(){
-    analogComparator.setOn(INTERNAL_REFERENCE, AIN1); //Setup analog comparator
-    analogComparator.enableInterrupt(battStatus, LOW);
     if (lowBattery) {
         LED_on();                         //Turn on LED
         mySwitch.send(low_Batt_code, 24); //send the 24bit low battery code
