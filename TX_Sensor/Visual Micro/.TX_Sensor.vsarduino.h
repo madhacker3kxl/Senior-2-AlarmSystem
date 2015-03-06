@@ -28,6 +28,8 @@ void wakeup();
 void send_data(int data);
 void LED_on();
 void LED_off();
+void FET_on();
+void FET_off();
 
 #include "C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\arduino.h"
 #include <TX_Sensor.ino>

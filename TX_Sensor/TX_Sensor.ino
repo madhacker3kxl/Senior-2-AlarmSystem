@@ -2,21 +2,24 @@
 #include <avr/sleep.h>
 #include <avr/io.h>
 #include <avr/wdt.h> //Needed to enable/disable watch dog timer
+
+//External Libraries
 #include <RCSwitch/RCSwitch.h>
 #include <analogComp-master/analogComp.h>
 
 #define TX   PINB4      //TX Pin
 #define LED  PINB3		//LED Pin
 #define Sens PINB2      //Input pin
+#define Fet  PINB0      //Power MOSFET for TX & Analog Comparator
 
-#define low_Batt_code    13976880 //Code for low battery
-const int Open_D =           8767848;
-const int Close_D =         8767847;
+#define low_Batt_code       6880    //Code for low battery
+const int Open_D =          7841;   //Code for Open
+const int Close_D =         7840;   //Code for Close
 
 RCSwitch mySwitch = RCSwitch();
 
 volatile boolean lowBattery = false; //Used to check if the interrupt has raised low battery
-volatile boolean is_open = false;    //If it is true that means the relay is open
+volatile boolean is_data_sent = false;    //If it is true that means the relay is open
 volatile boolean wdt_setup = false;
 
 void setup() {
@@ -30,7 +33,7 @@ void setup() {
     power_timer0_enable();  //Turn on timer0 clock on
     power_timer1_enable();  //Turn on timer1 clock on
 
-    //Setup needs pins
+    //Setup needed pins
     DDRB  |= (1 << LED);	//Set notification pin as output
     PORTB &= ~(1 << LED);   //Set the notification pin as low just in case
 
@@ -38,6 +41,10 @@ void setup() {
     PORTB &= ~(1 << Sens);  //Tri-state the input (no pull-up)
 
     DDRB  |= (1 << TX);	    //Set notification pin as output
+
+    DDRB  |= (1 << Fet);	//Set fet pin as output
+    PORTB &= ~(1 << Fet);   //Set the fet pin as low to turn off power
+
 
     mySwitch.enableTransmit(TX);     //Enable transmit on pin TX
 
@@ -49,25 +56,33 @@ void setup() {
 
 void loop() {
 
-    if ((1<<Sens))
+    if (PINB && Sens)
     {
-        wdt_setup = false;          //Turn off WDT setup function
-        wdt_disable();              //Turn off the WDT!
-        //enable_batt_check();        //Enable comparitor for battery check
+        FET_on();
+        wdt_setup = false;               //Turn off WDT setup function
+        wdt_disable();                   //Turn off the WDT!
 
-        send_data(Close_D);         //Send data for closed contact
+        //enable_batt_check();             //Enable comparitor for battery check
+
+        send_data(Close_D);              //Send data for closed contact
+
         //check_battery();
-        attachInterrupt(0, wakeup, LOW);   //Turn on wake up interrupt
+        is_data_sent = false;            //Revert data sent flag
+        attachInterrupt(0, wakeup, LOW); //Turn on wake up interrupt
     }
 
-    if (wdt_setup)
+    if (wdt_setup == true)
     {
+        FET_on();                   //Turn on power MOSFET
         //enable_batt_check();
-        send_data(Open_D); //Send data out for open contact
+        if (is_data_sent == false)  //Check for data sent flag
+        {
+            send_data(Open_D);      //Send data out for open contact
+            is_data_sent = true;    //Set flag that data has been sent
+        }
+
         //check_battery();
-        setup_watchdog(8); //Turn on watchdog for 4 sec delay
-        beep();
-        beep();
+        setup_watchdog(8);          //Turn on watchdog for 4 sec delay
     }
 
     sleep();
@@ -76,9 +91,8 @@ void loop() {
 void sleep(){
     set_sleep_mode(SLEEP_MODE_PWR_DOWN); //Set sleep mode to deep sleep
     sleep_enable();                      //Enable sleep mode
-
     analogComparator.setOff();           //Turn off analog comparator before sleeping
-
+    FET_off();                           //Turn off power MOSFET
     sleep_mode();                        //Go to sleep
     sleep_disable();                     //Disable sleep
 }
@@ -96,9 +110,9 @@ void enable_batt_check(){ //Functions for analog setup
 }
 
 void check_battery(){
-    if (lowBattery) {
-        LED_on();                         //Turn on LED
-        mySwitch.send(low_Batt_code, 24); //send the 24bit low battery code
+    if (lowBattery == true)
+    {
+        mySwitch.send(low_Batt_code, 24); //send low battery code
     }
 }
 
@@ -122,10 +136,6 @@ void battStatus(){
 void wakeup(){  //interrupt for contact open
         detachInterrupt(0);     //Turn off pin interrupt
         wdt_setup = true;       //Activate the watch-dog setup function
-
-        //Set up the pins again just incase
-        DDRB  &= ~(1<< Sens);   //Set Sens pin as input
-        PORTB &= ~(1 << Sens);  //Tri-state the input (no pull-up)
 }
 
 void send_data(int data){
@@ -140,6 +150,14 @@ void LED_on(){
 
 void LED_off(){
     PORTB &= ~(1 << LED);    //Turn off LED
+}
+
+void FET_on(){
+    PORTB |= (1 << Fet);     //Turn on FET
+}
+
+void FET_off(){
+    PORTB &= ~(1 << Fet);    //Turn off FET
 }
 
 ISR(WDT_vect) { //Watch-dog interrupt vector
