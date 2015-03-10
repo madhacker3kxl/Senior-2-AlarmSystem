@@ -1,6 +1,19 @@
+//Function of the system:
+//The system is based on 433MHz ASK RF
+//On startup everything is shutoff to conserve power and goes to sleep
+//When the interrupt pin goes low the MCU wakes up
+//It turns of the watchdog flag on and turns off the interrupt 0
+//In the main loop it checks for if the Sens pin goes back to high
+//If it is not high it sets up watchdog on for every 4 seconds
+//It also sends the open signal through RF
+//Before sending signal the analog comparator is turned on to check for battery level
+//If the battery is low, the low battery signal is sent
+//If the Sens pin goes back high, the watchdog is turned back off, then goes to sleep
+//The process repeats
+//See Useful Codes folder for the libraries and such
+
 #include <avr/power.h>
 #include <avr/sleep.h>
-#include <avr/io.h>
 #include <avr/wdt.h> //Needed to enable/disable watch dog timer
 
 //External Libraries
@@ -18,9 +31,9 @@ const int Close_D =         7840;   //Code for Close
 
 RCSwitch mySwitch = RCSwitch();
 
-volatile boolean lowBattery = false; //Used to check if the interrupt has raised low battery
+volatile boolean lowBattery = false;      //Used to check if the interrupt has raised low battery
 volatile boolean is_data_sent = false;    //If it is true that means the relay is open
-volatile boolean wdt_setup = false;
+volatile boolean wdt_setup = false;       //Flag for watchdog
 
 void setup() {
     //Power off not needed stuff
@@ -44,7 +57,6 @@ void setup() {
 
     DDRB  |= (1 << Fet);	//Set fet pin as output
     PORTB &= ~(1 << Fet);   //Set the fet pin as low to turn off power
-
 
     mySwitch.enableTransmit(TX);     //Enable transmit on pin TX
 

@@ -37,11 +37,14 @@
 #endif
 
 
+//Doesn't apply anymore!
+//===========================================================================
 // At least for the ATTiny X4/X5, receiving has to be disabled due to
-// missing libm depencies (udivmodhi4)
+// missing libm depencies (udivmodhi4) 
 //#if defined( __AVR_ATtinyX5__ ) or defined ( __AVR_ATtinyX4__ )
 //#define RCSwitchDisableReceiving
 //#endif
+//============================================================================
 
 // Number of maximum High/Low changes per packet.
 // We can handle up to (unsigned long) => 32 bit * 2 H/L changes per bit + 2 for sync
