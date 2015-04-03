@@ -266,3 +266,5 @@ eagle.epf
 *.drd.*
 *.info
 *.eps
+*.xml
+TX_Sensor/Visual Micro/.TX_Sensor.vsarduino.h

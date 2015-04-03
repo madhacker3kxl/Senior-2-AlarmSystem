@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "BedShaker", "BedShaker.cppproj", "{375E470B-C633-437D-B398-DE3591776FD8}"
 EndProject
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "TX_Sensor", "..\TX_Sensor\TX_Sensor.cppproj", "{F27B3150-AA5E-4FE4-BEE0-152489D1A865}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -15,10 +13,6 @@ Global
 		{375E470B-C633-437D-B398-DE3591776FD8}.Debug|AVR.Build.0 = Debug|AVR
 		{375E470B-C633-437D-B398-DE3591776FD8}.Release|AVR.ActiveCfg = Release|AVR
 		{375E470B-C633-437D-B398-DE3591776FD8}.Release|AVR.Build.0 = Release|AVR
-		{F27B3150-AA5E-4FE4-BEE0-152489D1A865}.Debug|AVR.ActiveCfg = Debug|AVR
-		{F27B3150-AA5E-4FE4-BEE0-152489D1A865}.Debug|AVR.Build.0 = Debug|AVR
-		{F27B3150-AA5E-4FE4-BEE0-152489D1A865}.Release|AVR.ActiveCfg = Release|AVR
-		{F27B3150-AA5E-4FE4-BEE0-152489D1A865}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -66,7 +66,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -103,7 +103,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -392,7 +392,7 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -429,7 +429,7 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -705,174 +705,6 @@ build.arch=AVR
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Arduino.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\Arduino.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\binary.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\binary.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_adc.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\core_adc.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_build_options.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\core_build_options.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_macros.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\core_macros.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_pins.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\core_pins.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_timers.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\core_timers.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\HardwareSerial.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\HardwareSerial.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\HardwareSerial.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\HardwareSerial.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\pins_arduino.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\pins_arduino.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\pins_arduino.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\pins_arduino.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Print.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\Print.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Print.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\Print.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\PwmTimer.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\PwmTimer.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Stream.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\Stream.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerial.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerial.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial115200.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerial115200.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial38400.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerial38400.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial9600.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerial9600.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerialErrors.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\TinyDebugSerialErrors.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Tone.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\Tone.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\ToneTimer.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\ToneTimer.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\UserTimer.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\UserTimer.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WCharacter.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WCharacter.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WConstants.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WConstants.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WInterrupts.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WInterrupts.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_analog.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring_analog.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_digital.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring_digital.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_private.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring_private.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_pulse.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring_pulse.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_shift.c">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\wiring_shift.c</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WMath.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WMath.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WProgram.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WProgram.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WString.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WString.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WString.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\core\WString.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\analogComp-master\analogComp.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\analogComp-master\analogComp.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\analogComp-master\analogComp.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\analogComp-master\analogComp.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\RCSwitch\RCSwitch.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\RCSwitch\RCSwitch.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\RCSwitch\RCSwitch.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\RCSwitch\RCSwitch.h</Link>
-    </Compile>
     <Compile Include="TX_Sensor.ino">
       <SubType>compile</SubType>
     </Compile>
@@ -881,12 +713,6 @@ build.arch=AVR
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\" />
-    <Folder Include="src\sketch-api-readonly\" />
-    <Folder Include="src\sketch-api-readonly\core\" />
-    <Folder Include="src\sketch-api-readonly\libraries\" />
-    <Folder Include="src\sketch-api-readonly\libraries\analogComp-master\" />
-    <Folder Include="src\sketch-api-readonly\libraries\RCSwitch\" />
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

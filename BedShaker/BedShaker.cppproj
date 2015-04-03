@@ -5,7 +5,7 @@
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{375e470b-c633-437d-b398-de3591776fd8}</ProjectGuid>
-    <avrdevice>atmega328p</avrdevice>
+    <avrdevice>attiny85</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -18,8 +18,7 @@
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
-    <OverrideVtorValue>
-    </OverrideVtorValue>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
@@ -39,6 +38,19 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.avrdragon</avrtool>
+    <com_atmel_avrdbg_tool_avrdragon>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>1000000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>ISP</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.avrdragon</ToolType>
+      <ToolNumber>00A20003100D</ToolNumber>
+      <ToolName>AVR Dragon</ToolName>
+    </com_atmel_avrdbg_tool_avrdragon>
+    <avrtoolinterface>ISP</avrtoolinterface>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -52,11 +64,11 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega328p__</Value>
-      <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>__AVR_ATtiny85__</Value>
+      <Value>__AVR_ATTINY85__</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
@@ -69,11 +81,13 @@
       <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>../../BedShaker</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -85,11 +99,11 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega328p__</Value>
-      <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>__AVR_ATtiny85__</Value>
+      <Value>__AVR_ATTINY85__</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
     </ListValues>
   </avrgcccpp.compiler.symbols.DefSymbols>
@@ -102,11 +116,13 @@
       <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>../../BedShaker</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -117,7 +133,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -131,11 +147,11 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega328p__</Value>
-      <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>__AVR_ATtiny85__</Value>
+      <Value>__AVR_ATTINY85__</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
@@ -148,11 +164,13 @@
       <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>../../BedShaker</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -164,11 +182,11 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega328p__</Value>
-      <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=160</Value>
+      <Value>__AVR_ATtiny85__</Value>
+      <Value>__AVR_ATTINY85__</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=16000000L</Value>
+      <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
     </ListValues>
   </avrgcccpp.compiler.symbols.DefSymbols>
@@ -181,11 +199,13 @@
       <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>../../BedShaker</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/Arduino/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -196,7 +216,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BedShaker.ino">

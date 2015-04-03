@@ -10,7 +10,6 @@
 //If the battery is low, the low battery signal is sent
 //If the Sens pin goes back high, the watchdog is turned back off, then goes to sleep
 //The process repeats
-//See Useful Codes folder for the libraries and such
 
 #include <avr/power.h>
 #include <avr/sleep.h>
@@ -25,9 +24,9 @@
 #define Sens PINB2      //Input pin
 #define Fet  PINB0      //Power MOSFET for TX & Analog Comparator
 
-#define low_Batt_code       6880    //Code for low battery
-const int Open_D =          7841;   //Code for Open
-const int Close_D =         7840;   //Code for Close
+const int low_Batt_code = 6880;  //Code for low battery
+const int Open_D        = 7841;  //Code for Open
+const int Close_D       = 7840;  //Code for Close
 
 RCSwitch mySwitch = RCSwitch();
 
