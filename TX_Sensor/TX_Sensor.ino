@@ -16,8 +16,8 @@
 #include <avr/wdt.h> //Needed to enable/disable watch dog timer
 
 //External Libraries
-#include <RCSwitch/RCSwitch.h>
-#include <analogComp-master/analogComp.h>
+#include <RCSwitch.h>
+#include <analogComp.h>
 
 #define TX   PINB4      //TX Pin
 #define LED  PINB3		//LED Pin
@@ -73,11 +73,11 @@ void loop() {
         wdt_setup = false;               //Turn off WDT setup function
         wdt_disable();                   //Turn off the WDT!
 
-        //enable_batt_check();             //Enable comparitor for battery check
+        enable_batt_check();             //Enable comparitor for battery check
 
         send_data(Close_D);              //Send data for closed contact
 
-        //check_battery();
+        check_battery();
         is_data_sent = false;            //Revert data sent flag
         attachInterrupt(0, wakeup, LOW); //Turn on wake up interrupt
     }
@@ -85,14 +85,14 @@ void loop() {
     if (wdt_setup == true)
     {
         FET_on();                   //Turn on power MOSFET
-        //enable_batt_check();
+        enable_batt_check();
         if (is_data_sent == false)  //Check for data sent flag
         {
             send_data(Open_D);      //Send data out for open contact
             is_data_sent = true;    //Set flag that data has been sent
         }
 
-        //check_battery();
+        check_battery();
         setup_watchdog(8);          //Turn on watchdog for 4 sec delay
     }
 

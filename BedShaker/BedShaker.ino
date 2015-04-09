@@ -10,7 +10,9 @@
 #include <avr/power.h>
 #include <avr/sleep.h>
 #include <avr/wdt.h> //Needed to enable/disable watch dog timer
-#include <RCSwitch/RCSwitch.h>
+
+//External Libraries
+#include <RCSwitch.h>
 
 //Pins going to use
 #define RX   INT0       //RX Pin

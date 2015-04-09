@@ -10,7 +10,7 @@
 
 #define __AVR_ATtiny85__
 #define __AVR_ATTINY85__
-#define ARDUINO 160
+#define ARDUINO 163
 #define ARDUINO_MAIN
 #define F_CPU 8000000L
 #define __AVR__

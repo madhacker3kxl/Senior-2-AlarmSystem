@@ -268,3 +268,5 @@ eagle.epf
 *.eps
 *.xml
 TX_Sensor/Visual Micro/.TX_Sensor.vsarduino.h
+*.ms13 (Security copy)
+*.ewprj (Security copy)
