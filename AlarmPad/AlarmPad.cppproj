@@ -54,7 +54,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=162</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -62,7 +62,6 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/include/avr/</Value>
@@ -71,6 +70,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/arduino_old/hardware/arduino/avr/libraries</Value>
       <Value>C:/arduino_old/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src</Value>
       <Value>../../AlarmPad</Value>
@@ -89,7 +90,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=162</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -97,7 +98,6 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/include/avr/</Value>
@@ -106,6 +106,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/arduino_old/hardware/arduino/avr/libraries</Value>
       <Value>C:/arduino_old/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src</Value>
       <Value>../../AlarmPad</Value>
@@ -121,7 +123,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../AlarmPad;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Arduino/libraries/LiquidCrystal/src;C:/Arduino/libraries/LiquidCrystal/src/utility;C:/arduino_old/hardware/arduino/avr/cores/arduino;C:/arduino_old/hardware/arduino/avr/variants/standard;C:/arduino_old/libraries/LiquidCrystal/src;C:/arduino_old/libraries/LiquidCrystal/src/utility;C:/arduino_old/libraries;C:/arduino_old/hardware/arduino/avr/libraries;c:/arduino_old/hardware/tools/avr/avr/include/;c:/arduino_old/hardware/tools/avr/avr/include/avr/;c:/arduino_old/hardware/tools/avr/avr/;c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../AlarmPad;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Arduino/libraries/LiquidCrystal/src;C:/Arduino/libraries/LiquidCrystal/src/utility;C:/arduino_old/hardware/arduino/avr/cores/arduino;C:/arduino_old/hardware/arduino/avr/variants/standard;C:/arduino_old/libraries/LiquidCrystal/src;C:/arduino_old/libraries/LiquidCrystal/src/utility;C:/arduino_old/libraries;C:/arduino_old/hardware/arduino/avr/libraries;c:/arduino_old/hardware/tools/avr/avr/include/;c:/arduino_old/hardware/tools/avr/avr/include/avr/;c:/arduino_old/hardware/tools/avr/avr/;c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>uno</arduino.board.name>
@@ -275,7 +277,7 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=162</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -283,7 +285,6 @@ build.arch=AVR
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/include/avr/</Value>
@@ -292,6 +293,8 @@ build.arch=AVR
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/arduino_old/hardware/arduino/avr/libraries</Value>
       <Value>C:/arduino_old/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src</Value>
       <Value>../../AlarmPad</Value>
@@ -310,7 +313,7 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=162</Value>
+      <Value>ARDUINO=161</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -318,7 +321,6 @@ build.arch=AVR
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/</Value>
       <Value>c:/arduino_old/hardware/tools/avr/avr/include/avr/</Value>
@@ -327,6 +329,8 @@ build.arch=AVR
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/arduino_old/hardware/arduino/avr/libraries</Value>
       <Value>C:/arduino_old/libraries</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src/utility</Value>
       <Value>C:/arduino_old/libraries/LiquidCrystal/src</Value>
       <Value>../../AlarmPad</Value>
@@ -342,7 +346,7 @@ build.arch=AVR
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../AlarmPad;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Arduino/libraries/LiquidCrystal/src;C:/Arduino/libraries/LiquidCrystal/src/utility;C:/arduino_old/hardware/arduino/avr/cores/arduino;C:/arduino_old/hardware/arduino/avr/variants/standard;C:/arduino_old/libraries/LiquidCrystal/src;C:/arduino_old/libraries/LiquidCrystal/src/utility;C:/arduino_old/libraries;C:/arduino_old/hardware/arduino/avr/libraries;c:/arduino_old/hardware/tools/avr/avr/include/;c:/arduino_old/hardware/tools/avr/avr/include/avr/;c:/arduino_old/hardware/tools/avr/avr/;c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../AlarmPad;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries/LiquidCrystal/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Arduino/libraries/LiquidCrystal/src;C:/Arduino/libraries/LiquidCrystal/src/utility;C:/arduino_old/hardware/arduino/avr/cores/arduino;C:/arduino_old/hardware/arduino/avr/variants/standard;C:/arduino_old/libraries/LiquidCrystal/src;C:/arduino_old/libraries/LiquidCrystal/src/utility;C:/arduino_old/libraries;C:/arduino_old/hardware/arduino/avr/libraries;c:/arduino_old/hardware/tools/avr/avr/include/;c:/arduino_old/hardware/tools/avr/avr/include/avr/;c:/arduino_old/hardware/tools/avr/avr/;c:/arduino_old/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>uno</arduino.board.name>
