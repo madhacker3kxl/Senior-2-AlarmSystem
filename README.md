@@ -11,5 +11,6 @@ Resources:
 	Libraries:
 		RCSwitch library: http://code.google.com/p/rc-switch/
 		AnalogComparator library: https://github.com/leomil72/analogComp
+		Keypad library: http://playground.arduino.cc/Code/Keypad
 		
 Ignore things in the "Visual Micro" folder 
