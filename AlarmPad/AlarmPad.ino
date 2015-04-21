@@ -10,15 +10,27 @@
 #define BL      9    //Backlight pin
 #define Status 13    //Status pin
 
+//LCD value display positions
+#define MotionPos 8  //Starting location for motion sensor display
+#define MagPos    8  //Starting location for magnetic sensor display
+
 //Codes for Door / window sensors
 #define Sensor_1    5101
+#define Sensor_1_Off     
 #define Sensor_2    5102
+#define Sensor_2_Off
 #define Sensor_3    5103
+#define Sensor_3_Off
 #define Sensor_4    5104
+#define Sensor_4_Off
 #define Sensor_5    5105
+#define Sensor_5_Off
 #define Sensor_6    5106
+#define Sensor_6_Off
 #define Sensor_7    5107
+#define Sensor_7_Off
 #define Sensor_8    5108
+#define Sensor_8_Off
 
 //Codes for Motion Sensor
 #define Motion_1    8767849
@@ -47,9 +59,18 @@ LiquidCrystal lcd(8, //RS Pin
                 
 RCSwitch mySwitch = RCSwitch();
 
+//Motion sensor location clear
+#define Motion_Clr_Wait 4
+bool motion_tmr_flag = false;
+byte m1;
+byte m2;
+byte m3;
+byte m4;
+
 bool is_armed = false;
-long startTime;
-long duration;
+
+//Other testing stuff
+
 
 void setup()
 {
@@ -79,11 +100,11 @@ void setup()
 
 void loop()
 {
-    timing_stuff(); //Sets up timing for timed functions
+    MotionClr(); //Sets up timing for timed functions
     
     if (mySwitch.available()) { //check for received code
         
-        int value = mySwitch.getReceivedValue();
+        unsigned int value = mySwitch.getReceivedValue();
         Serial.println(value);
         
         //Compare the received code and run the defined function
@@ -103,14 +124,15 @@ void loop()
             case Motion_2:
             case Motion_3:
             case Motion_4:
-                if (is_armed)
-                {
-                    send_data(Panic_On);
-                } 
-                else
-                {
-                    
-                }
+                //if (is_armed)
+                //{
+                    //motion(&value);
+                    //send_data(Panic_On);
+                //} 
+                //else
+                //{
+                    //motion(&value);
+                //}
                 break;
             case Sensor_1:
                 if (is_armed)
@@ -126,37 +148,128 @@ void loop()
             case Sensor_8:
                  if (is_armed)
                  {
+                     mag(&value);
                      send_data(Panic_On);
                  } 
                  else
                  {
-                     
+                     mag(&value);
                  }
                  break;
         }            
         mySwitch.resetAvailable();
-    }
-    
-    if (duration > 20)
-    {
-        lcd.clear();
-        duration = 0;
-    }
-
+        
+        //clear motion sensor display
+        if (motion_tmr_flag) 
+        {
+            MotionClr();
+        } 
+    }    
 }
 
-void timing_stuff()
+void motion(unsigned int *x)
+{    
+    switch (*x) {
+        case Motion_1:
+            lcd.setCursor(MotionPos,2);
+            lcd.print("1");
+            m1 = (millis() / 1000);
+            break;
+        case Motion_2:
+            lcd.setCursor(MotionPos + 2,2);
+            lcd.print("2");
+            m2 = (millis() / 1000);
+            break;
+        case Motion_3:
+            lcd.setCursor(MotionPos + 4,2);
+            lcd.print("3");
+            m3 = (millis() / 1000);
+            break;
+        case Motion_4:
+            lcd.setCursor(MotionPos + 6,2);
+            lcd.print("4");
+            m4 = (millis() / 1000);
+            break;
+    }
+}
+
+void mag(unsigned int *x)
 {
-    startTime = millis();
-    duration  = ((millis() - startTime) / 1000);
+    switch (*x) {
+        case Sensor_1:
+        lcd.setCursor(MagPos,1);
+        lcd.print("1");
+        break;
+        case Sensor_2:
+        lcd.setCursor(MagPos + 1,1);
+        lcd.print("2");
+        break;
+        case Sensor_3:
+        lcd.setCursor(MagPos + 2,1);
+        lcd.print("3");
+        break;
+        case Sensor_4:
+        lcd.setCursor(MagPos + 3,1);
+        lcd.print("4");
+        break;
+        case Sensor_5:
+        lcd.setCursor(MagPos + 4,1);
+        lcd.print("5");
+        break;
+        case Sensor_6:
+        lcd.setCursor(MagPos + 5,1);
+        lcd.print("6");
+        break;
+        case Sensor_7:
+        lcd.setCursor(MagPos + 6,1);
+        lcd.print("7");
+        break;
+        case Sensor_8:
+        lcd.setCursor(MagPos + 7,1);
+        lcd.print("8");
+        break;
+    }
+}
+
+void MotionClr()
+{
+    byte pos1 = ((millis() / 1000) - m1);
+    byte pos2 = ((millis() / 1000) - m2);
+    byte pos3 = ((millis() / 1000) - m3);
+    byte pos4 = ((millis() / 1000) - m4);
     
-    lcd.setCursor(9, 1);
-    //print the number of seconds since reset
-    lcd.print((startTime / 1000));
-    lcd.setCursor(8,2);
-    lcd.print(duration);
+    if (pos1 > Motion_Clr_Wait)
+    {
+        m1 = 0;
+        lcd.setCursor(MotionPos,2);
+        lcd.print(" ");
+    }
     
-    if (duration > 40) {duration = 0;}
+    if (pos2 > Motion_Clr_Wait)
+    {
+        m2 = 0;
+        lcd.setCursor(MotionPos + 2,2);
+        lcd.print(" ");
+    }
+    
+    if (pos3 > Motion_Clr_Wait)
+    {
+        m3 = 0;
+        lcd.setCursor(MotionPos + 4,2);
+        lcd.print(" ");
+    }
+    
+    if (pos4 > Motion_Clr_Wait)
+    {
+        m4 = 0;
+        lcd.setCursor(MotionPos + 6,2);
+        lcd.print(" ");
+    }
+    
+    if ((m1 && m2 && m3 && m4) == 0) 
+    {
+        motion_tmr_flag = false;
+    }
 }
 
 void send_data(int data)
@@ -166,7 +279,8 @@ void send_data(int data)
     mySwitch.enableReceive(0); //Enable transmit
 }
 
-void alarmed_door_open() {
+void alarmed_door_open() 
+{
     //When the main door is opened, turn the buzzer on the alarm pad,
     //give the user 15 second to put the right password
     long startTime = millis();
