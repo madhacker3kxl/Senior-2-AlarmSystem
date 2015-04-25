@@ -66,7 +66,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -101,7 +101,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -134,6 +134,253 @@
 </AvrGccCpp>
     </ToolchainSettings>
     <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
+        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
+        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+bootloader.tool=avrdude
+bootloader.unlock_bits=0xFF
+bootloader.lock_bits=0xFF
+build.board=AVR_TINYX5
+menu.cpu.attiny85at16e=ATtiny85 @ 16 MHz  (external crystal; 4.3 V BOD)
+menu.cpu.attiny85at16e.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at16e.upload.maximum_size=8192
+menu.cpu.attiny85at16e.upload.maximum_data_size=512
+menu.cpu.attiny85at16e.bootloader.low_fuses=0xFF
+menu.cpu.attiny85at16e.bootloader.high_fuses=0xD4
+menu.cpu.attiny85at16e.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at16e.bootloader.path=empty
+menu.cpu.attiny85at16e.bootloader.file=empty85at16.hex
+menu.cpu.attiny85at16e.build.mcu=attiny85
+menu.cpu.attiny85at16e.build.f_cpu=16000000L
+menu.cpu.attiny85at16e.build.core=tiny
+menu.cpu.attiny85at16p=ATtiny85 @ 16 MHz  (internal PLL; 4.3 V BOD)
+menu.cpu.attiny85at16p.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at16p.upload.maximum_size=8192
+menu.cpu.attiny85at16p.upload.maximum_data_size=512
+menu.cpu.attiny85at16p.bootloader.low_fuses=0xC1
+menu.cpu.attiny85at16p.bootloader.high_fuses=0xD4
+menu.cpu.attiny85at16p.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at16p.bootloader.path=empty
+menu.cpu.attiny85at16p.bootloader.file=empty85at16.hex
+menu.cpu.attiny85at16p.build.mcu=attiny85
+menu.cpu.attiny85at16p.build.f_cpu=16000000L
+menu.cpu.attiny85at16p.build.core=tiny
+menu.cpu.attiny85at8=ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+menu.cpu.attiny85at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at8.upload.maximum_size=8192
+menu.cpu.attiny85at8.upload.maximum_data_size=512
+menu.cpu.attiny85at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny85at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny85at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at8.bootloader.path=empty
+menu.cpu.attiny85at8.bootloader.file=empty85at8.hex
+menu.cpu.attiny85at8.build.mcu=attiny85
+menu.cpu.attiny85at8.build.f_cpu=8000000L
+menu.cpu.attiny85at8.build.core=tiny
+menu.cpu.attiny85at1=ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)
+menu.cpu.attiny85at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at1.upload.maximum_size=8192
+menu.cpu.attiny85at1.upload.maximum_data_size=512
+menu.cpu.attiny85at1.bootloader.low_fuses=0x62
+menu.cpu.attiny85at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny85at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at1.bootloader.path=empty
+menu.cpu.attiny85at1.bootloader.file=empty85at1.hex
+menu.cpu.attiny85at1.build.mcu=attiny85
+menu.cpu.attiny85at1.build.f_cpu=1000000L
+menu.cpu.attiny85at1.build.core=tiny
+menu.cpu.attiny85at128=ATtiny85 @ 128 KHz  (watchdog oscillator; 1.8 V BOD)
+menu.cpu.attiny85at128.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at128.upload.maximum_size=8192
+menu.cpu.attiny85at128.upload.maximum_data_size=512
+menu.cpu.attiny85at128.bootloader.low_fuses=0xC4
+menu.cpu.attiny85at128.bootloader.high_fuses=0xD6
+menu.cpu.attiny85at128.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at128.bootloader.path=empty
+menu.cpu.attiny85at128.bootloader.file=empty85at1.hex
+menu.cpu.attiny85at128.build.mcu=attiny85
+menu.cpu.attiny85at128.build.f_cpu=128000L
+menu.cpu.attiny85at128.build.core=tiny
+menu.cpu.attiny45at8=ATtiny45 @ 8 MHz
+menu.cpu.attiny45at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny45at8.upload.maximum_size=4096
+menu.cpu.attiny45at8.upload.maximum_data_size=256
+menu.cpu.attiny45at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny45at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny45at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny45at8.bootloader.path=empty
+menu.cpu.attiny45at8.bootloader.file=empty45at8.hex
+menu.cpu.attiny45at8.build.mcu=attiny45
+menu.cpu.attiny45at8.build.f_cpu=8000000L
+menu.cpu.attiny45at8.build.core=tiny
+menu.cpu.attiny45at1=ATtiny45 @ 1 MHz
+menu.cpu.attiny45at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny45at1.upload.maximum_size=4096
+menu.cpu.attiny45at1.upload.maximum_data_size=256
+menu.cpu.attiny45at1.bootloader.low_fuses=0x62
+menu.cpu.attiny45at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny45at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny45at1.bootloader.path=empty
+menu.cpu.attiny45at1.bootloader.file=empty45at1.hex
+menu.cpu.attiny45at1.build.mcu=attiny45
+menu.cpu.attiny45at1.build.f_cpu=1000000L
+menu.cpu.attiny45at1.build.core=tiny
+menu.cpu.attiny25at8=ATtiny25 @ 8 MHz
+menu.cpu.attiny25at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny25at8.upload.maximum_size=2048
+menu.cpu.attiny25at8.upload.maximum_data_size=128
+menu.cpu.attiny25at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny25at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny25at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny25at8.bootloader.path=empty
+menu.cpu.attiny25at8.bootloader.file=empty25at8.hex
+menu.cpu.attiny25at8.build.mcu=attiny25
+menu.cpu.attiny25at8.build.f_cpu=8000000L
+menu.cpu.attiny25at8.build.core=tiny
+menu.cpu.attiny25at1=ATtiny25 @ 1 MHz
+menu.cpu.attiny25at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny25at1.upload.maximum_size=2048
+menu.cpu.attiny25at1.upload.maximum_data_size=128
+menu.cpu.attiny25at1.bootloader.low_fuses=0x62
+menu.cpu.attiny25at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny25at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny25at1.bootloader.path=empty
+menu.cpu.attiny25at1.bootloader.file=empty25at1.hex
+menu.cpu.attiny25at1.build.mcu=attiny25
+menu.cpu.attiny25at1.build.f_cpu=1000000L
+menu.cpu.attiny25at1.build.core=tiny
+runtime.ide.path=C:\Arduino
+build.system.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
+runtime.ide.version=163
+originalid=tinyx5
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.5.6
+compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-w -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v -v -v -v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v -v -v -v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v -v -v -v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v -v -v -v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.path}/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+tools.avrdude.path={runtime.tools.avrdude.path}
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino3.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino3.path=C:\Arduino\hardware\tools\avr
+runtime.tools.core2-32-poky-linux.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\core2-32-poky-linux\1.6.2+1.0
+runtime.tools.core2-32-poky-linux-1.6.2+1.0.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\core2-32-poky-linux\1.6.2+1.0
+runtime.tools.sketchUploader.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\sketchUploader\1.6.2+1.0
+runtime.tools.sketchUploader-1.6.2+1.0.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\sketchUploader\1.6.2+1.0
+upload.tool=arduino:arduinoisp
+upload.maximum_size=8192
+upload.maximum_data_size=512
+bootloader.low_fuses=0xE2
+bootloader.high_fuses=0xD7
+bootloader.extended_fuses=0xFF
+bootloader.path=empty
+bootloader.file=empty85at8.hex
+build.mcu=attiny85
+build.f_cpu=8000000L
+build.core=tiny
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.location.contributions=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.libraries.allow=true
+ide.appid=arduino16x
+location.sketchbook=C:\Users\Tahsin\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+runtime.platform.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>attiny85</arduino.build.mcu>
+        <arduino.build.f_cpu>8000000L</arduino.build.f_cpu>
+        <arduino.build.core>tiny</arduino.build.core>
+        <arduino.upload.maximum_size>8192</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>attiny 1.5.8-2</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -149,7 +396,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -184,7 +431,7 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=161</Value>
+      <Value>ARDUINO=163</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=8000000L</Value>
       <Value>__AVR__</Value>
@@ -217,6 +464,253 @@
 </AvrGccCpp>
     </ToolchainSettings>
     <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../BedShaker;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
+        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
+        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+bootloader.tool=avrdude
+bootloader.unlock_bits=0xFF
+bootloader.lock_bits=0xFF
+build.board=AVR_TINYX5
+menu.cpu.attiny85at16e=ATtiny85 @ 16 MHz  (external crystal; 4.3 V BOD)
+menu.cpu.attiny85at16e.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at16e.upload.maximum_size=8192
+menu.cpu.attiny85at16e.upload.maximum_data_size=512
+menu.cpu.attiny85at16e.bootloader.low_fuses=0xFF
+menu.cpu.attiny85at16e.bootloader.high_fuses=0xD4
+menu.cpu.attiny85at16e.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at16e.bootloader.path=empty
+menu.cpu.attiny85at16e.bootloader.file=empty85at16.hex
+menu.cpu.attiny85at16e.build.mcu=attiny85
+menu.cpu.attiny85at16e.build.f_cpu=16000000L
+menu.cpu.attiny85at16e.build.core=tiny
+menu.cpu.attiny85at16p=ATtiny85 @ 16 MHz  (internal PLL; 4.3 V BOD)
+menu.cpu.attiny85at16p.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at16p.upload.maximum_size=8192
+menu.cpu.attiny85at16p.upload.maximum_data_size=512
+menu.cpu.attiny85at16p.bootloader.low_fuses=0xC1
+menu.cpu.attiny85at16p.bootloader.high_fuses=0xD4
+menu.cpu.attiny85at16p.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at16p.bootloader.path=empty
+menu.cpu.attiny85at16p.bootloader.file=empty85at16.hex
+menu.cpu.attiny85at16p.build.mcu=attiny85
+menu.cpu.attiny85at16p.build.f_cpu=16000000L
+menu.cpu.attiny85at16p.build.core=tiny
+menu.cpu.attiny85at8=ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+menu.cpu.attiny85at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at8.upload.maximum_size=8192
+menu.cpu.attiny85at8.upload.maximum_data_size=512
+menu.cpu.attiny85at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny85at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny85at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at8.bootloader.path=empty
+menu.cpu.attiny85at8.bootloader.file=empty85at8.hex
+menu.cpu.attiny85at8.build.mcu=attiny85
+menu.cpu.attiny85at8.build.f_cpu=8000000L
+menu.cpu.attiny85at8.build.core=tiny
+menu.cpu.attiny85at1=ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)
+menu.cpu.attiny85at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at1.upload.maximum_size=8192
+menu.cpu.attiny85at1.upload.maximum_data_size=512
+menu.cpu.attiny85at1.bootloader.low_fuses=0x62
+menu.cpu.attiny85at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny85at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at1.bootloader.path=empty
+menu.cpu.attiny85at1.bootloader.file=empty85at1.hex
+menu.cpu.attiny85at1.build.mcu=attiny85
+menu.cpu.attiny85at1.build.f_cpu=1000000L
+menu.cpu.attiny85at1.build.core=tiny
+menu.cpu.attiny85at128=ATtiny85 @ 128 KHz  (watchdog oscillator; 1.8 V BOD)
+menu.cpu.attiny85at128.upload.tool=arduino:arduinoisp
+menu.cpu.attiny85at128.upload.maximum_size=8192
+menu.cpu.attiny85at128.upload.maximum_data_size=512
+menu.cpu.attiny85at128.bootloader.low_fuses=0xC4
+menu.cpu.attiny85at128.bootloader.high_fuses=0xD6
+menu.cpu.attiny85at128.bootloader.extended_fuses=0xFF
+menu.cpu.attiny85at128.bootloader.path=empty
+menu.cpu.attiny85at128.bootloader.file=empty85at1.hex
+menu.cpu.attiny85at128.build.mcu=attiny85
+menu.cpu.attiny85at128.build.f_cpu=128000L
+menu.cpu.attiny85at128.build.core=tiny
+menu.cpu.attiny45at8=ATtiny45 @ 8 MHz
+menu.cpu.attiny45at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny45at8.upload.maximum_size=4096
+menu.cpu.attiny45at8.upload.maximum_data_size=256
+menu.cpu.attiny45at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny45at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny45at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny45at8.bootloader.path=empty
+menu.cpu.attiny45at8.bootloader.file=empty45at8.hex
+menu.cpu.attiny45at8.build.mcu=attiny45
+menu.cpu.attiny45at8.build.f_cpu=8000000L
+menu.cpu.attiny45at8.build.core=tiny
+menu.cpu.attiny45at1=ATtiny45 @ 1 MHz
+menu.cpu.attiny45at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny45at1.upload.maximum_size=4096
+menu.cpu.attiny45at1.upload.maximum_data_size=256
+menu.cpu.attiny45at1.bootloader.low_fuses=0x62
+menu.cpu.attiny45at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny45at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny45at1.bootloader.path=empty
+menu.cpu.attiny45at1.bootloader.file=empty45at1.hex
+menu.cpu.attiny45at1.build.mcu=attiny45
+menu.cpu.attiny45at1.build.f_cpu=1000000L
+menu.cpu.attiny45at1.build.core=tiny
+menu.cpu.attiny25at8=ATtiny25 @ 8 MHz
+menu.cpu.attiny25at8.upload.tool=arduino:arduinoisp
+menu.cpu.attiny25at8.upload.maximum_size=2048
+menu.cpu.attiny25at8.upload.maximum_data_size=128
+menu.cpu.attiny25at8.bootloader.low_fuses=0xE2
+menu.cpu.attiny25at8.bootloader.high_fuses=0xD7
+menu.cpu.attiny25at8.bootloader.extended_fuses=0xFF
+menu.cpu.attiny25at8.bootloader.path=empty
+menu.cpu.attiny25at8.bootloader.file=empty25at8.hex
+menu.cpu.attiny25at8.build.mcu=attiny25
+menu.cpu.attiny25at8.build.f_cpu=8000000L
+menu.cpu.attiny25at8.build.core=tiny
+menu.cpu.attiny25at1=ATtiny25 @ 1 MHz
+menu.cpu.attiny25at1.upload.tool=arduino:arduinoisp
+menu.cpu.attiny25at1.upload.maximum_size=2048
+menu.cpu.attiny25at1.upload.maximum_data_size=128
+menu.cpu.attiny25at1.bootloader.low_fuses=0x62
+menu.cpu.attiny25at1.bootloader.high_fuses=0xD7
+menu.cpu.attiny25at1.bootloader.extended_fuses=0xFF
+menu.cpu.attiny25at1.bootloader.path=empty
+menu.cpu.attiny25at1.bootloader.file=empty25at1.hex
+menu.cpu.attiny25at1.build.mcu=attiny25
+menu.cpu.attiny25at1.build.f_cpu=1000000L
+menu.cpu.attiny25at1.build.core=tiny
+runtime.ide.path=C:\Arduino
+build.system.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
+runtime.ide.version=163
+originalid=tinyx5
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.5.6
+compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-w -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v -v -v -v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v -v -v -v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v -v -v -v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v -v -v -v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.path}/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+tools.avrdude.path={runtime.tools.avrdude.path}
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino3.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino3.path=C:\Arduino\hardware\tools\avr
+runtime.tools.core2-32-poky-linux.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\core2-32-poky-linux\1.6.2+1.0
+runtime.tools.core2-32-poky-linux-1.6.2+1.0.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\core2-32-poky-linux\1.6.2+1.0
+runtime.tools.sketchUploader.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\sketchUploader\1.6.2+1.0
+runtime.tools.sketchUploader-1.6.2+1.0.path=C:\Users\Tahsin\AppData\Roaming\arduino15\packages\Intel\tools\sketchUploader\1.6.2+1.0
+upload.tool=arduino:arduinoisp
+upload.maximum_size=8192
+upload.maximum_data_size=512
+bootloader.low_fuses=0xE2
+bootloader.high_fuses=0xD7
+bootloader.extended_fuses=0xFF
+bootloader.path=empty
+bootloader.file=empty85at8.hex
+build.mcu=attiny85
+build.f_cpu=8000000L
+build.core=tiny
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.location.contributions=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.libraries.allow=true
+ide.appid=arduino16x
+location.sketchbook=C:\Users\Tahsin\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+runtime.platform.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>attiny85</arduino.build.mcu>
+        <arduino.build.f_cpu>8000000L</arduino.build.f_cpu>
+        <arduino.build.core>tiny</arduino.build.core>
+        <arduino.upload.maximum_size>8192</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>attiny 1.5.8-2</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BedShaker.ino">

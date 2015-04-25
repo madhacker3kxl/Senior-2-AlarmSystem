@@ -2,6 +2,9 @@
 #include <avr/sleep.h>
 //External Libraries
 #include <LiquidCrystal.h>
+#include <Keypad_I2Ca.h>
+#include <Wire.h>
+#include <Keypad.h>
 #include <RCSwitch.h>
 
 //Pin definition
@@ -14,23 +17,39 @@
 #define MotionPos 8  //Starting location for motion sensor display
 #define MagPos    8  //Starting location for magnetic sensor display
 
+//Keypad Stuffs
+#define I2CADDR 0x3f
+
+const byte ROWS = 4; //four rows
+const byte COLS = 4; //three columns
+char keys[ROWS][COLS] = {
+    {'1','2','3','A'},
+    {'4','5','6','B'},
+    {'7','8','9','C'},
+    {'*','0','#','D'}
+};
+byte rowPins[ROWS] = {0, 1, 2, 3}; //connect to the row pin outs of the keypad
+byte colPins[COLS] = {4, 5, 6, 7}; //connect to the column pin outs of the keypad
+
+Keypad_I2Ca keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS, I2CADDR );
+
 //Codes for Door / window sensors
-#define Sensor_1    5101
-#define Sensor_1_Off     
-#define Sensor_2    5102
-#define Sensor_2_Off
-#define Sensor_3    5103
-#define Sensor_3_Off
-#define Sensor_4    5104
-#define Sensor_4_Off
-#define Sensor_5    5105
-#define Sensor_5_Off
-#define Sensor_6    5106
-#define Sensor_6_Off
-#define Sensor_7    5107
-#define Sensor_7_Off
-#define Sensor_8    5108
-#define Sensor_8_Off
+#define Sensor_1        5101
+#define Sensor_1_Off    5201
+#define Sensor_2        5102
+#define Sensor_2_Off    5202
+#define Sensor_3        5103
+#define Sensor_3_Off    5203
+#define Sensor_4        5104
+#define Sensor_4_Off    5204
+#define Sensor_5        5105
+#define Sensor_5_Off    5205
+#define Sensor_6        5106
+#define Sensor_6_Off    5206
+#define Sensor_7        5107
+#define Sensor_7_Off    5207
+#define Sensor_8        5108
+#define Sensor_8_Off    5208
 
 //Codes for Motion Sensor
 #define Motion_1    8767849
@@ -39,8 +58,10 @@
 #define Motion_4    13953641
 
 //Other codes
-#define Alarm_On    5592332
+#define Away_On     5592332
+#define Stay_ON     'A'
 #define Alarm_Off   5592512
+#define Doorbell_btn 13976880
 
 //Output codes
 #define Notify_Code 8080
@@ -67,7 +88,8 @@ byte m2;
 byte m3;
 byte m4;
 
-bool is_armed = false;
+bool is_away = false;
+bool is_stay = false;
 
 //Other testing stuff
 
@@ -86,6 +108,7 @@ void setup()
     power_timer1_enable();  //Turn on timer1 clock on
     
     lcd.begin(20, 4);       //Setup LCD
+   // keypad.begin( );        //Setup Keypad
     
     //Setup needed pins
     DDRB  |= (1 << BL);	    //Set Back light pin as output
@@ -100,99 +123,97 @@ void setup()
 
 void loop()
 {
-    MotionClr(); //Sets up timing for timed functions
+    MotionClr();
     
     if (mySwitch.available()) { //check for received code
         
         unsigned int value = mySwitch.getReceivedValue();
         Serial.println(value);
         
-        //Compare the received code and run the defined function
-        switch (value) {
-            case Alarm_On:
-                is_armed = true;
-                lcd.setCursor(0,3);
-                lcd.print("****** ARMED ******");
-                break;
-            case Alarm_Off:
-                is_armed = false;
-                lcd.setCursor(0,3);
-                lcd.print("**** NOT ARMED ****");
-                send_data(Panic_off);
-                break;
-            case Motion_1:
-            case Motion_2:
-            case Motion_3:
-            case Motion_4:
-                //if (is_armed)
-                //{
-                    //motion(&value);
-                    //send_data(Panic_On);
-                //} 
-                //else
-                //{
-                    //motion(&value);
-                //}
-                break;
-            case Sensor_1:
-                if (is_armed)
-                {
-                    alarmed_door_open();
-                }
-            case Sensor_2:
-            case Sensor_3:
-            case Sensor_4:
-            case Sensor_5:
-            case Sensor_6:
-            case Sensor_7:
-            case Sensor_8:
-                 if (is_armed)
-                 {
-                     mag(&value);
-                     send_data(Panic_On);
-                 } 
-                 else
-                 {
-                     mag(&value);
-                 }
-                 break;
-        }            
-        mySwitch.resetAvailable();
+        //Compare the received code and run the defined function       
         
-        //clear motion sensor display
-        if (motion_tmr_flag) 
+        if (is_away)
         {
-            MotionClr();
-        } 
-    }    
-}
-
-void motion(unsigned int *x)
-{    
-    switch (*x) {
-        case Motion_1:
-            lcd.setCursor(MotionPos,2);
-            lcd.print("1");
-            m1 = (millis() / 1000);
-            break;
-        case Motion_2:
-            lcd.setCursor(MotionPos + 2,2);
-            lcd.print("2");
-            m2 = (millis() / 1000);
-            break;
-        case Motion_3:
-            lcd.setCursor(MotionPos + 4,2);
-            lcd.print("3");
-            m3 = (millis() / 1000);
-            break;
-        case Motion_4:
-            lcd.setCursor(MotionPos + 6,2);
-            lcd.print("4");
-            m4 = (millis() / 1000);
-            break;
+            motion(&value);
+            mag(&value);
+            send_data(Panic_On);
+        }
+        else if (is_stay)
+        {
+            mag(&value);
+            send_data(Panic_On);
+        }
+        else
+        {
+            motion(&value);
+            mag(&value);
+            mag_clr(&value);
+        }
+		Alarm_ON_Off(&value);
+		Others(&value);
+        
+        mySwitch.resetAvailable();
     }
 }
 
+//Routine for Alarm ON/Off and notification on display
+void Alarm_ON_Off(unsigned int *x)
+{
+    switch (*x) {
+        case Away_On:
+        is_away = true;
+        lcd.setCursor(0,3);
+        lcd.print("****** AWAY ******");
+        break;
+        case Stay_ON:
+        is_stay = true;
+        lcd.setCursor(0,3);
+        lcd.print("****** Stay ******");
+        break;
+        case Alarm_Off:
+        is_away = false;
+        is_stay = false;
+        lcd.setCursor(0,3);
+        lcd.print("**** NOT ARMED ****");
+        send_data(Panic_off);
+        break;
+    }
+}
+
+//Comparison for motion sensor values.
+//It also sets the notification timers for the sensor
+void motion(unsigned int *x)
+{
+    switch (*x)
+    {
+        case Motion_1:
+        lcd.setCursor(MotionPos,2);
+        lcd.print("1");
+        m1 = (millis() / 1000);
+        motion_tmr_flag = true;
+        break;
+        case Motion_2:
+        lcd.setCursor(MotionPos + 2,2);
+        lcd.print("2");
+        m2 = (millis() / 1000);
+        motion_tmr_flag = true;
+        break;
+        case Motion_3:
+        lcd.setCursor(MotionPos + 4,2);
+        lcd.print("3");
+        m3 = (millis() / 1000);
+        motion_tmr_flag = true;
+        break;
+        case Motion_4:
+        lcd.setCursor(MotionPos + 6,2);
+        lcd.print("4");
+        m4 = (millis() / 1000);
+        motion_tmr_flag = true;
+        break;
+    }
+}
+
+//Comparison for Window/Door sensor values.
 void mag(unsigned int *x)
 {
     switch (*x) {
@@ -231,6 +252,46 @@ void mag(unsigned int *x)
     }
 }
 
+//Routine for clearing the Window/Door sensor notification on LCD display
+void mag_clr(unsigned int *x)
+{
+    switch (*x) {
+        case Sensor_1_Off:
+        lcd.setCursor(MagPos,1);
+        lcd.print(" ");
+        break;
+        case Sensor_2_Off:
+        lcd.setCursor(MagPos + 1,1);
+        lcd.print(" ");
+        break;
+        case Sensor_3_Off:
+        lcd.setCursor(MagPos + 2,1);
+        lcd.print(" ");
+        break;
+        case Sensor_4_Off:
+        lcd.setCursor(MagPos + 3,1);
+        lcd.print(" ");
+        break;
+        case Sensor_5_Off:
+        lcd.setCursor(MagPos + 4,1);
+        lcd.print(" ");
+        break;
+        case Sensor_6_Off:
+        lcd.setCursor(MagPos + 5,1);
+        lcd.print(" ");
+        break;
+        case Sensor_7_Off:
+        lcd.setCursor(MagPos + 6,1);
+        lcd.print(" ");
+        break;
+        case Sensor_8_Off:
+        lcd.setCursor(MagPos + 7,1);
+        lcd.print(" ");
+        break;
+    }
+}
+
+//Routine for clearing the motion sensor notification on LCD display
 void MotionClr()
 {
     byte pos1 = ((millis() / 1000) - m1);
@@ -265,17 +326,21 @@ void MotionClr()
         lcd.setCursor(MotionPos + 6,2);
         lcd.print(" ");
     }
-    
-    if ((m1 && m2 && m3 && m4) == 0) 
-    {
-        motion_tmr_flag = false;
-    }
+}
+
+void Others(unsigned int *x)
+{
+	switch (*x) {
+        case Doorbell_btn:
+        send_data(Doorbell); //Send the Doorbell code
+        break;
+    }        
 }
 
 void send_data(int data)
 {
-    mySwitch.disableReceive();  //Disable transmit before sending
-    mySwitch.send(data,24);     //Send data out
+    mySwitch.disableReceive(); //Disable transmit before sending
+    mySwitch.send(data,24);    //Send data out
     mySwitch.enableReceive(0); //Enable transmit
 }
 
@@ -312,7 +377,7 @@ void setup_display()
     lcd.print("Motion: ");
     lcd.setCursor(0,3);
     
-    if (is_armed)
+    if (is_away)
     lcd.print("****** ARMED ******");
     else
     lcd.print("**** NOT ARMED ****");

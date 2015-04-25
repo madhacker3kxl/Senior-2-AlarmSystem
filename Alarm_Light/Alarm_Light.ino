@@ -10,7 +10,7 @@
 #include <pitches.h>
 
 //Pins going to use
-//#define RX   INT0    //RX Pin
+#define RX     0       //RX Pin
 #define Light  PINB3   //Flasher Pin
 #define Sound  PINB4   //Sound output pin
 
@@ -39,7 +39,7 @@ void setup() {
   DDRB  |= (1 << Sound);  //Set Sound pin as output
   PORTB &= ~(1 << Sound); //Set the pin as low just in case
 
-  mySwitch.enableReceive(0); //Enable receive on pin RX
+  mySwitch.enableReceive(RX); //Enable receive on pin RX
 
   //Notify the user mcu has loaded fine
   notify();

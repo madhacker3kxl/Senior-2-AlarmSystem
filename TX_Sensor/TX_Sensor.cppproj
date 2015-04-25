@@ -84,10 +84,10 @@
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
@@ -121,10 +121,10 @@
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
@@ -137,7 +137,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
@@ -410,10 +410,10 @@ build.arch=AVR
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
@@ -447,10 +447,10 @@ build.arch=AVR
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
       <Value>C:/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
       <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
@@ -463,7 +463,7 @@ build.arch=AVR
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
