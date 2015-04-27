@@ -74,7 +74,7 @@ void loop() {
 //Strobe for 2 seconds for notification
 void notify() {
   PORTB |= (1 << Light);
-  delay(2000);
+  delay(8000);
   PORTB &= ~(1 << Light);
 }
 
