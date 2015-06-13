@@ -267,9 +267,11 @@ eagle.epf
 *.info
 *.eps
 *.xml
-TX_Sensor/Visual Micro/.TX_Sensor.vsarduino.h
 
 # Multisim project stuffs
 *.ms13 (Security copy)
 *.ewprj (Security copy)
 Ultiboard Exports/
+*.ewnet
+
+Visual Micro/

@@ -39,7 +39,7 @@ void setup() {
   DDRB  |= (1 << Sound);  //Set Sound pin as output
   PORTB &= ~(1 << Sound); //Set the pin as low just in case
 
-  mySwitch.enableReceive(RX); //Enable receive on pin RX
+  mySwitch.enableReceive(0); //Enable receive on pin RX
 
   //Notify the user mcu has loaded fine
   notify();
@@ -47,27 +47,29 @@ void setup() {
 
 void loop() {
   if (mySwitch.available()) {
-
-    int value = mySwitch.getReceivedValue();
-
-    if (value == N_Code) {
-      notify();
-    }
-
-    if (value == D_Code)
-    {
-      doorbell();
-    }
-
-    if (value == P_Code_On)
-    {
-      panic_on();
-    }
-    if (value == P_Code_Off)
-    {
-      panic_off();
-    }
-    mySwitch.resetAvailable();
+      mySwitch.disableReceive();
+      
+      int value = mySwitch.getReceivedValue();
+      
+      if (value == N_Code){
+          notify();
+      }
+      
+      if (value == D_Code)
+      {
+          doorbell();
+      }
+      if (value == P_Code_On)
+      {
+          panic_on();
+      }
+      if (value == P_Code_Off)
+      {
+          panic_off();
+      }
+      mySwitch.enableReceive(0);
+      
+      mySwitch.resetAvailable();
   }
 }
 
@@ -115,6 +117,7 @@ const int underworld_melody[] = {
   NOTE_AS3, NOTE_A3, NOTE_GS3,
   0, 0, 0
 };
+
 //Underworld tempo
 const int underworld_tempo[] = {
   12, 12, 12, 12,
@@ -141,19 +144,19 @@ const int underworld_tempo[] = {
 //Audio for the doorbell
 void Doorbell_Audio() {
   // iterate over the notes of the melody:
-  int size = sizeof(underworld_melody) / sizeof(int);
-  for (int thisNote = 0; thisNote < size; thisNote++) {
+  unsigned int size = sizeof(underworld_melody) / sizeof(int);
+  for (unsigned int thisNote = 0; thisNote < size; thisNote++) {
 
     // to calculate the note duration, take one second
     // divided by the note type.
     //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-    int noteDuration = 1000 / underworld_tempo[thisNote];
+    unsigned int noteDuration = 1000 / underworld_tempo[thisNote];
 
     tone(Sound, underworld_melody[thisNote], noteDuration);
 
-    // to distinguish the notes, set a minimum time between them.
+    // to distinguish the notes, set a minimum tisme between them.
     // the note's duration + 30% seems to work well:
-    int pauseBetweenNotes = noteDuration * 1.30;
+    unsigned int pauseBetweenNotes = noteDuration * 1.30;
     delay(pauseBetweenNotes);
 
     // stop the tone playing:

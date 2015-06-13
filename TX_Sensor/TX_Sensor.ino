@@ -25,8 +25,8 @@
 #define Fet  PINB0      //Power MOSFET for TX & Analog Comparator
 
 const int low_Batt_code = 6880;  //Code for low battery
-const int Open_D        = 5101;  //Code for Open
-const int Close_D       = 5201;  //Code for Close
+const int Open_D        = 5102;  //Code for Open
+const int Close_D       = 5202;  //Code for Close
 
 RCSwitch mySwitch = RCSwitch();
 

@@ -132,6 +132,7 @@ void loop()
         
         //Compare the received code and run the defined function       
         
+        delay(1000);
         if (is_away)
         {
             motion(&value);

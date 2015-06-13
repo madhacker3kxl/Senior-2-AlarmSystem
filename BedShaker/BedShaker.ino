@@ -15,7 +15,7 @@
 #include <RCSwitch.h>
 
 //Pins going to use
-#define RX   INT0       //RX Pin
+#define RX   0          //RX Pin
 #define OUT  PINB3		//Output Pin
 
 //Receive codes
@@ -49,8 +49,10 @@ void setup() {
 
 void loop(){
 	if (mySwitch.available()) {
-		
+        
 		int value = mySwitch.getReceivedValue();
+        
+        mySwitch.disableReceive();
 		
 		if (value == N_Code){
 			notify();
@@ -68,6 +70,8 @@ void loop(){
 		{
 			panic_off();
 		}
+        
+        mySwitch.enableReceive(0);
 		mySwitch.resetAvailable();			
 	}
 }
