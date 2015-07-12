@@ -33,4 +33,10 @@ Resources:
 		AnalogComparator library: https://github.com/leomil72/analogComp
 		Keypad library: http://playground.arduino.cc/Code/Keypad
 		
+	Others:
+		http://forum.arduino.cc/index.php?topic=248107.0
+		Hacking 433Mhz Devices: http://mightydevices.com/?p=300
+		Mario theme in arduino: http://www.linuxcircle.com/2013/03/31/playing-mario-bros-tune-with-arduino-and-piezo-buzzer/
+		
+		
 Ignore things in the "Visual Micro" folder 
