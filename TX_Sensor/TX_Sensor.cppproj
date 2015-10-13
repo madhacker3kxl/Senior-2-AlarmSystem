@@ -2,10 +2,10 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectVersion>6.2</ProjectVersion>
+    <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{f27b3150-aa5e-4fe4-bee0-152489d1a865}</ProjectGuid>
-    <avrdevice>attiny85</avrdevice>
+    <avrdevice>ATmega2560</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -38,7 +38,8 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.avrdragon</avrtool>
+    <avrtool>
+    </avrtool>
     <com_atmel_avrdbg_tool_avrdragon>
       <ToolOptions>
         <InterfaceProperties>
@@ -51,10 +52,12 @@
       <ToolName>AVR Dragon</ToolName>
     </com_atmel_avrdbg_tool_avrdragon>
     <avrtoolinterface>ISP</avrtoolinterface>
+    <ExternalProgrammingToolCommand />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega2560"</avrgcc.common.Device>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
@@ -66,29 +69,30 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=163</Value>
+      <Value>ARDUINO=165</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=8000000L</Value>
+      <Value>F_CPU=1000000L</Value>
       <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_TINYX5</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
-      <Value>c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
-      <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -102,29 +106,30 @@
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=163</Value>
+      <Value>ARDUINO=165</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=8000000L</Value>
+      <Value>F_CPU=1000000L</Value>
       <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_TINYX5</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
     </ListValues>
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
-      <Value>c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
-      <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -135,12 +140,12 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;C:/Users/madha/Documents/Arduino/libraries/analogComp;C:/Users/madha/Documents/Arduino/libraries/analogComp/utility;C:/Users/madha/Documents/Arduino/libraries/RCSwitch;C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers;C:/Users/madha/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
-        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
-        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+        <arduino.board.name>tinyx5_attiny85at1</arduino.board.name>
+        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
+        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)
 bootloader.tool=avrdude
 bootloader.unlock_bits=0xFF
 bootloader.lock_bits=0xFF
@@ -253,18 +258,28 @@ menu.cpu.attiny25at1.bootloader.file=empty25at1.hex
 menu.cpu.attiny25at1.build.mcu=attiny25
 menu.cpu.attiny25at1.build.f_cpu=1000000L
 menu.cpu.attiny25at1.build.core=tiny
-runtime.ide.path=C:\Arduino
-build.system.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
-runtime.ide.version=160
+runtime.ide.path=C:\Program Files (x86)\Arduino
+build.system.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
+runtime.ide.version=165
+target_package=attiny 1.5.8-2
+target_platform=avr
+runtime.hardware.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2
 originalid=tinyx5
+intellisense.tools.path={runtime.tools.avr-gcc.path}/
+intellisense.include.paths={intellisense.tools.path}avr/include/;{intellisense.tools.path}/avr/include/avr/;{intellisense.tools.path}lib\gcc\avr\4.8.1\include
 tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
 tools.atprogram.cmd.setwinpath=true
 tools.atprogram.program.params.verbose=-v
 tools.atprogram.program.params.quiet=-q
 tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
 tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.erase.params.verbose=-v
+tools.atprogram.erase.params.quiet=-q
+tools.atprogram.bootloader.params.verbose=-v
+tools.atprogram.bootloader.params.quiet=-q
+tools.atprogram.bootloader.pattern="{cmd.path}" -d {build.mcu} {bootloader.verbose}  program -c -f "{runtime.ide.path}/hardware/arduino/avr/bootloaders/{bootloader.file}"
 version=1.5.6
-compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.path={runtime.tools.avr-gcc.path}/bin/
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 compiler.c.elf.flags=-w -Os -Wl,--gc-sections
@@ -299,8 +314,8 @@ recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build
 recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
 recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
 recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
-tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
-tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.cmd.path={path}/bin/avrdude
+tools.avrdude.config.path={path}/etc/avrdude.conf
 tools.avrdude.upload.params.verbose=-v -v -v -v
 tools.avrdude.upload.params.quiet=-q -q
 tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
@@ -315,30 +330,41 @@ tools.avrdude.bootloader.params.quiet=-q -q
 tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.path}/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
 build.usb_manufacturer=
 build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
-vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall
+compiler.warning_flags.all=-Wall -Wextra
+recipe.output.tmp_file={build.project_name}.hex
+recipe.output.save_file={build.project_name}.{build.variant}.hex
+tools.avrdude.path={runtime.tools.avrdude.path}
+vm.platform.root.path=C:\Program Files (x86)\Atmel\Studio\7.0\Extensions\cma1a3w0.1y1\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino5.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino5.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
 upload.tool=arduino:arduinoisp
 upload.maximum_size=8192
 upload.maximum_data_size=512
-bootloader.low_fuses=0xE2
+bootloader.low_fuses=0x62
 bootloader.high_fuses=0xD7
 bootloader.extended_fuses=0xFF
 bootloader.path=empty
-bootloader.file=empty85at8.hex
+bootloader.file=empty85at1.hex
 build.mcu=attiny85
-build.f_cpu=8000000L
+build.f_cpu=1000000L
 build.core=tiny
-ide.hint=Arduino 1.6 Ide
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
 ide.location.key=Arduino16x
 ide.location.ide.winreg=Arduino 1.6.x Application
 ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
 ide.location.sketchbook.preferences=sketchbook.path
-ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
-ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
 ide.default.version=160
 ide.default.package=arduino
 ide.default.platform=avr
 ide.multiplatform=true
 ide.includes=arduino.h
+ide.exe_name=arduino
 ide.platformswithoutpackage=false
 ide.includes.fallback=wprogram.h
 ide.extension=ino
@@ -347,22 +373,34 @@ ide.versionGTEQ=160
 ide.exe=arduino.exe
 ide.hosts=atmel
 ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+ide.help.reference.path2=reference\www.arduino.cc\en\Reference
+ide.help.reference.serial=reference\www.arduino.cc\en\Serial
 vm.debug=true
 software=ARDUINO
 ssh.user.name=root
 ssh.user.default.password=arduino
 ssh.host.wwwfiles.path=/www/sd
 build.working_directory={runtime.ide.path}
+ide.location.preferences.portable={runtime.ide.path}\portable
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_LOCAL%\arduino15\preferences.txt
+ide.location.contributions=%VM_APPDATA_LOCAL%\arduino15
+ide.location.contributions_fallback=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.boards.ignore_unless_rewrite_found=true
+ide.contributions.libraries.allow=true
+ide.contributions.boards.support.urls.wiki=https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
 ide.appid=arduino16x
-location.sketchbook=C:\Users\Tahsin\Documents\Arduino
+location.sketchbook=C:\Users\madha\Documents\Arduino
 vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
-runtime.platform.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+vm.boardsource.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+runtime.platform.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr
 vm.platformname.name=avr
 build.arch=AVR
 </arduino.board.property_bag>
         <arduino.build.mcu>attiny85</arduino.build.mcu>
-        <arduino.build.f_cpu>8000000L</arduino.build.f_cpu>
+        <arduino.build.f_cpu>1000000L</arduino.build.f_cpu>
         <arduino.build.core>tiny</arduino.build.core>
         <arduino.upload.protocol>
         </arduino.upload.protocol>
@@ -379,6 +417,7 @@ build.arch=AVR
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega2560"</avrgcc.common.Device>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
@@ -390,29 +429,30 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=163</Value>
+      <Value>ARDUINO=165</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=8000000L</Value>
+      <Value>F_CPU=1000000L</Value>
       <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_TINYX5</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
-      <Value>c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
-      <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -426,29 +466,30 @@ build.arch=AVR
     <ListValues>
       <Value>__AVR_ATtiny85__</Value>
       <Value>__AVR_ATTINY85__</Value>
-      <Value>ARDUINO=163</Value>
+      <Value>ARDUINO=165</Value>
       <Value>ARDUINO_MAIN</Value>
-      <Value>F_CPU=8000000L</Value>
+      <Value>F_CPU=1000000L</Value>
       <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_TINYX5</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
     </ListValues>
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
-      <Value>c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
-      <Value>C:/Arduino/libraries</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/libraries/analogComp</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/RCSwitch</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp/utility</Value>
+      <Value>C:/Users/madha/Documents/Arduino/libraries/analogComp</Value>
       <Value>../../TX_Sensor</Value>
-      <Value>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
+      <Value>C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -459,12 +500,12 @@ build.arch=AVR
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;../../TX_Sensor;C:/Arduino/libraries;C:/Arduino/hardware/arduino/avr/libraries;C:/Users/Tahsin/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Tahsin/Documents/Arduino/libraries;c:/arduino/hardware/tools/avr/avr/include/;c:/arduino/hardware/tools/avr/avr/include/avr/;c:/arduino/hardware/tools/avr/avr/;c:/arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch;C:/Users/Tahsin/Documents/Arduino/libraries/RCSwitch/utility;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp-master/utility;C:/Arduino/hardware/arduino/avr/cores/arduino;C:/Arduino/hardware/arduino/avr/variants/standard;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp;C:/Users/Tahsin/Documents/Arduino/libraries/analogComp/utility;C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/cores/tiny;C:/Users/madha/Documents/Arduino/libraries/analogComp;C:/Users/madha/Documents/Arduino/libraries/analogComp/utility;C:/Users/madha/Documents/Arduino/libraries/RCSwitch;C:/Users/madha/Documents/Arduino/libraries/RCSwitch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/madha/Documents/Arduino/hardware/attiny 1.5.8-2/avr/libraries;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/cma1a3w0.1y1/Micro Platforms/default/debuggers;C:/Users/madha/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.board.name>tinyx5_attiny85at8</arduino.board.name>
-        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
-        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 8 MHz  (internal oscillator; BOD disabled)
+        <arduino.board.name>tinyx5_attiny85at1</arduino.board.name>
+        <arduino.board.desc>ATtiny x5 w/ ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)</arduino.board.desc>
+        <arduino.board.property_bag>name=ATtiny x5 w/ ATtiny85 @ 1 MHz  (internal oscillator; BOD disabled)
 bootloader.tool=avrdude
 bootloader.unlock_bits=0xFF
 bootloader.lock_bits=0xFF
@@ -577,18 +618,28 @@ menu.cpu.attiny25at1.bootloader.file=empty25at1.hex
 menu.cpu.attiny25at1.build.mcu=attiny25
 menu.cpu.attiny25at1.build.f_cpu=1000000L
 menu.cpu.attiny25at1.build.core=tiny
-runtime.ide.path=C:\Arduino
-build.system.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
-runtime.ide.version=160
+runtime.ide.path=C:\Program Files (x86)\Arduino
+build.system.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr\system
+runtime.ide.version=165
+target_package=attiny 1.5.8-2
+target_platform=avr
+runtime.hardware.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2
 originalid=tinyx5
+intellisense.tools.path={runtime.tools.avr-gcc.path}/
+intellisense.include.paths={intellisense.tools.path}avr/include/;{intellisense.tools.path}/avr/include/avr/;{intellisense.tools.path}lib\gcc\avr\4.8.1\include
 tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
 tools.atprogram.cmd.setwinpath=true
 tools.atprogram.program.params.verbose=-v
 tools.atprogram.program.params.quiet=-q
 tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
 tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.erase.params.verbose=-v
+tools.atprogram.erase.params.quiet=-q
+tools.atprogram.bootloader.params.verbose=-v
+tools.atprogram.bootloader.params.quiet=-q
+tools.atprogram.bootloader.pattern="{cmd.path}" -d {build.mcu} {bootloader.verbose}  program -c -f "{runtime.ide.path}/hardware/arduino/avr/bootloaders/{bootloader.file}"
 version=1.5.6
-compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.path={runtime.tools.avr-gcc.path}/bin/
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 compiler.c.elf.flags=-w -Os -Wl,--gc-sections
@@ -623,8 +674,8 @@ recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build
 recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
 recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
 recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
-tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
-tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.cmd.path={path}/bin/avrdude
+tools.avrdude.config.path={path}/etc/avrdude.conf
 tools.avrdude.upload.params.verbose=-v -v -v -v
 tools.avrdude.upload.params.quiet=-q -q
 tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
@@ -639,30 +690,41 @@ tools.avrdude.bootloader.params.quiet=-q -q
 tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.path}/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
 build.usb_manufacturer=
 build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
-vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall
+compiler.warning_flags.all=-Wall -Wextra
+recipe.output.tmp_file={build.project_name}.hex
+recipe.output.save_file={build.project_name}.{build.variant}.hex
+tools.avrdude.path={runtime.tools.avrdude.path}
+vm.platform.root.path=C:\Program Files (x86)\Atmel\Studio\7.0\Extensions\cma1a3w0.1y1\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino5.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino5.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
 upload.tool=arduino:arduinoisp
 upload.maximum_size=8192
 upload.maximum_data_size=512
-bootloader.low_fuses=0xE2
+bootloader.low_fuses=0x62
 bootloader.high_fuses=0xD7
 bootloader.extended_fuses=0xFF
 bootloader.path=empty
-bootloader.file=empty85at8.hex
+bootloader.file=empty85at1.hex
 build.mcu=attiny85
-build.f_cpu=8000000L
+build.f_cpu=1000000L
 build.core=tiny
-ide.hint=Arduino 1.6 Ide
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
 ide.location.key=Arduino16x
 ide.location.ide.winreg=Arduino 1.6.x Application
 ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
 ide.location.sketchbook.preferences=sketchbook.path
-ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
-ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
 ide.default.version=160
 ide.default.package=arduino
 ide.default.platform=avr
 ide.multiplatform=true
 ide.includes=arduino.h
+ide.exe_name=arduino
 ide.platformswithoutpackage=false
 ide.includes.fallback=wprogram.h
 ide.extension=ino
@@ -671,22 +733,34 @@ ide.versionGTEQ=160
 ide.exe=arduino.exe
 ide.hosts=atmel
 ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+ide.help.reference.path2=reference\www.arduino.cc\en\Reference
+ide.help.reference.serial=reference\www.arduino.cc\en\Serial
 vm.debug=true
 software=ARDUINO
 ssh.user.name=root
 ssh.user.default.password=arduino
 ssh.host.wwwfiles.path=/www/sd
 build.working_directory={runtime.ide.path}
+ide.location.preferences.portable={runtime.ide.path}\portable
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_LOCAL%\arduino15\preferences.txt
+ide.location.contributions=%VM_APPDATA_LOCAL%\arduino15
+ide.location.contributions_fallback=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.boards.ignore_unless_rewrite_found=true
+ide.contributions.libraries.allow=true
+ide.contributions.boards.support.urls.wiki=https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
 ide.appid=arduino16x
-location.sketchbook=C:\Users\Tahsin\Documents\Arduino
+location.sketchbook=C:\Users\madha\Documents\Arduino
 vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
-runtime.platform.path=C:\Users\Tahsin\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+vm.boardsource.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr
+runtime.platform.path=C:\Users\madha\Documents\Arduino\hardware\attiny 1.5.8-2\avr
 vm.platformname.name=avr
 build.arch=AVR
 </arduino.board.property_bag>
         <arduino.build.mcu>attiny85</arduino.build.mcu>
-        <arduino.build.f_cpu>8000000L</arduino.build.f_cpu>
+        <arduino.build.f_cpu>1000000L</arduino.build.f_cpu>
         <arduino.build.core>tiny</arduino.build.core>
         <arduino.upload.protocol>
         </arduino.upload.protocol>
@@ -701,15 +775,193 @@ build.arch=AVR
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\Arduino.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\binary.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\binary.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_adc.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\core_adc.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_build_options.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\core_build_options.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_macros.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\core_macros.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_pins.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\core_pins.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\core_timers.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\core_timers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\HardwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\HardwareSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\HardwareSerial.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\main.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\main.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\pins_arduino.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\pins_arduino.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\pins_arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\pins_arduino.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\Print.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Print.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\Print.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\PwmTimer.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\PwmTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Stream.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\Stream.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerial.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial115200.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerial115200.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial38400.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerial38400.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerial9600.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerial9600.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\TinyDebugSerialErrors.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\TinyDebugSerialErrors.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\ToneTimer.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\ToneTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\UserTimer.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\UserTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WCharacter.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WCharacter.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WConstants.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WConstants.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_private.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring_private.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_pulse.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring_pulse.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WProgram.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WProgram.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WString.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\hardware\attiny 1.5.8-2\avr\cores\tiny\WString.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\core\WString.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\analogComp\analogComp.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\libraries\analogComp\analogComp.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\analogComp\analogComp.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\libraries\analogComp\analogComp.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\RCSwitch\RCSwitch.cpp">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\libraries\RCSwitch\RCSwitch.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Arduino\libraries\RCSwitch\RCSwitch.h">
+      <SubType>compile</SubType>
+      <Link>src\_micro-api-readonly\libraries\RCSwitch\RCSwitch.h</Link>
+    </Compile>
     <Compile Include="TX_Sensor.ino">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Visual Micro\.TX_Sensor.vsarduino.h">
+    <Compile Include="__vm\.TX_Sensor.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Visual Micro\" />
+    <Folder Include="src\" />
+    <Folder Include="src\_micro-api-readonly\" />
+    <Folder Include="src\_micro-api-readonly\core\" />
+    <Folder Include="src\_micro-api-readonly\libraries\" />
+    <Folder Include="src\_micro-api-readonly\libraries\analogComp\" />
+    <Folder Include="src\_micro-api-readonly\libraries\RCSwitch\" />
+    <Folder Include="__vm\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
